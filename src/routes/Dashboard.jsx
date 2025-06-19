@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Appbar from "../components/Appbar";
 import RecipeCard from "../components/RecipeCard";
-import main from '../assets/MAINkitchnix.jpg';
+import main from '../assets/Mainkitchnix.jpg';
 import CuisineCard from "../components/CuisineCard";
 
 export default function Dashboard() {
