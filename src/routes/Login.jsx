@@ -1,5 +1,5 @@
 import { SigninAuth } from "../components/LoginAuth"
-import Quote from "../components/quote"
+import Quote from "../components/Quote"
 
 
 function Login(){
