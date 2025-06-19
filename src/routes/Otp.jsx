@@ -1,4 +1,4 @@
-import Quote from "../components/quote";
+import Quote from "../components/Quote";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
