@@ -1,4 +1,4 @@
-import Quote from "../components/quote"
+import Quote from "../components/Quote"
 import { SignupAuth } from "../components/SignupAuth"
 
 
