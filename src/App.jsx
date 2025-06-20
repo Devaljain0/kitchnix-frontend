@@ -1,6 +1,6 @@
 
-// import { Route, Routes } from 'react-router-dom'
-// import Login from './routes/Login'
+ import { Route, Routes } from 'react-router-dom'
+ import Login from './routes/Login'
 // import Signup from './routes/Signup'
 // import Otp from './routes/Otp'
 // import { ProtectedRoute } from "./components/ProtectedRoute"; // Import the ProtectedRoute component
@@ -15,15 +15,17 @@
 // import AllRecipes from './routes/AllRecipes';
 // import OrderSummary from './routes/Order';
 // import UserProfile from './routes/UserProfile';
+console.log("App loaded")
+ function App() {
+  
 
-function App() {
-  return <h1 style={{ color: 'red' }}>Kitchnix Test</h1>;
-
-  // return (
-  // <div>
-  //   <Routes>
-  //   <Route path="/order" element={<OrderSummary/>} />
-  //     <Route path="/login" element={<Login/>} />
+  return (
+ 
+     <Routes>
+    
+   <Route path="/login" element={<Login/>} />
+      </Routes>
+     // <Route path="/order" element={<OrderSummary/>} />
   //     <Route path="/signup" element={<Signup/>} />
   //     <Route path="/verify" element={<Otp/>} />
   //     <Route path="/adminLogin" element={<AdminLogin/>} />
@@ -69,7 +71,7 @@ function App() {
   //   </Routes>
   
   // </div>
-  // )
+   )
 }
 
 export default App;
