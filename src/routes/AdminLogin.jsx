@@ -14,7 +14,7 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/admin/login', {
+      const response = await axios.post('https://kitchnix-backend.onrender.com/admin/login', {
         email,
         password,
       })

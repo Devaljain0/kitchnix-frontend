@@ -29,7 +29,7 @@ export default function UserProfile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/user/profile", {
+        const res = await axios.get("https://kitchnix-backend.onrender.com/api/v1/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfile(res.data);
@@ -50,7 +50,7 @@ export default function UserProfile() {
 
   const handleSave = async () => {
     try {
-      await axios.put("http://localhost:3000/api/v1/user/profile", formData, {
+      await axios.put("https://kitchnix-backend.onrender.com/api/v1/user/profile", formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProfile({ ...profile, ...formData });
@@ -62,7 +62,7 @@ export default function UserProfile() {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/user/orders", {
+      const res = await axios.get("https://kitchnix-backend.onrender.com/api/v1/user/orders", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setOrders(res.data.orders || []);

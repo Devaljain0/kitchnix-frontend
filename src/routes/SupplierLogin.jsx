@@ -11,7 +11,7 @@ function  SupplierLogin () {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/supplier/login', {
+      const response = await axios.post('https://kitchnix-backend.onrender.com/supplier/login', {
         username,
         password,
       });

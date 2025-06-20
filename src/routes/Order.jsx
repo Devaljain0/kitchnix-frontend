@@ -25,7 +25,7 @@ const OrderSummary = () => {
 
   const fetchOrderSummary = async (userEmail) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/cart/${userEmail}`, {
+      const response = await axios.get(`https://kitchnix-backend.onrender.com/api/v1/cart/${userEmail}`, {
         headers: {
           Authorization: `Bearer ${token}` // Add the token to the request headers
         }

@@ -23,7 +23,7 @@ const UserCart = () => {
 
   const fetchCartItems = async (userEmail) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/cart/${userEmail}`, {
+      const response = await axios.get(`https://kitchnix-backend.onrender.com/api/v1/cart/${userEmail}`, {
         headers: {
           Authorization: `Bearer ${token}` // Add the token to the request headers
         }
@@ -39,7 +39,7 @@ const UserCart = () => {
 
   const handleAdd = async (recipeId) => {
     try {
-      await axios.post('http://localhost:3000/api/v1/cart/add', { recipe_id: recipeId, quantity: 1 }, {
+      await axios.post('https://kitchnix-backend.onrender.com/api/v1/cart/add', { recipe_id: recipeId, quantity: 1 }, {
         headers: {
           Authorization: `Bearer ${token}` // Add the token to the request headers
         }
@@ -53,7 +53,7 @@ const UserCart = () => {
   const handleRemove = async (recipeId) => {
     const email = jwtDecode(token).email; // Extract email again
     try {
-      await axios.delete(`http://localhost:3000/api/v1/cart/remove/${email}/${recipeId}`, {
+      await axios.delete(`https://kitchnix-backend.onrender.com/api/v1/cart/remove/${email}/${recipeId}`, {
         headers: {
           Authorization: `Bearer ${token}` // Add the token to the request headers
         }
@@ -75,7 +75,7 @@ const UserCart = () => {
     }));
 
     try {
-      await axios.post('http://localhost:3000/api/v1/order/place', { orders: orderDetails }, {
+      await axios.post('https://kitchnix-backend.onrender.com/api/v1/order/place', { orders: orderDetails }, {
         headers: {
           Authorization: `Bearer ${token}` // Add the token to the request headers
         }

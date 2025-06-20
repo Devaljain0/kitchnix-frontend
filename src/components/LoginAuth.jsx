@@ -20,7 +20,7 @@ export const SigninAuth = () => {
 
     const onClickHandler = async () => {
       try {
-          const response = await axios.post('http://localhost:3000/api/v1/login', {
+          const response = await axios.post('https://kitchnix-backend.onrender.com/api/v1/login', {
               email,
               password,
           });

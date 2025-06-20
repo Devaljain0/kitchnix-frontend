@@ -20,7 +20,7 @@ export default function Otp(){
     const onVerifyHandler = async () => {
       console.log(email);
       try {
-          const response = await axios.post('http://localhost:3000/api/v1/verify', {
+          const response = await axios.post('https://kitchnix-backend.onrender.com/api/v1/verify', {
               email,
               code: otp
           });

@@ -27,7 +27,7 @@ function Inventory() {
   const fetchIngredients = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:3000/ingredients', {
+      const response = await axios.get('https://kitchnix-backend.onrender.com/ingredients', {
         headers: {
           Authorization: `Bearer ${token}` // Attach token in header
         }
@@ -51,7 +51,7 @@ function Inventory() {
     if (editingId) {
       // Update existing ingredient
       try {
-        await axios.put(`http://localhost:3000/ingredients/${editingId}`, form, {
+        await axios.put(`https://kitchnix-backend.onrender.com/ingredients/${editingId}`, form, {
           headers: {
             Authorization: `Bearer ${token}` // Attach token in header
           }
@@ -65,7 +65,7 @@ function Inventory() {
     } else {
       // Add new ingredient
       try {
-        await axios.post('http://localhost:3000/ingredients', form, {
+        await axios.post('https://kitchnix-backend.onrender.com/ingredients', form, {
           headers: {
             Authorization: `Bearer ${token}` // Attach token in header
           }
@@ -82,7 +82,7 @@ function Inventory() {
   const deleteIngredient = async (id) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:3000/ingredients/${id}`, {
+      await axios.delete(`https://kitchnix-backend.onrender.com/ingredients/${id}`, {
         headers: {
           Authorization: `Bearer ${token}` // Attach token in header
         }
@@ -111,6 +111,7 @@ function Inventory() {
 
   // If not authenticated, show the login page
   if (!isAuthenticated) {
+    // eslint-disable-next-line react/no-unknown-property
     return <supplierLogin onLogin={() => setIsAuthenticated(true)} />;
   }
 

@@ -27,7 +27,7 @@ const RecipeCard = ({ id, title, description, image, cooktime }) => {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/v1/cart/add', {
+      await axios.post('https://kitchnix-backend.onrender.com/api/v1/cart/add', {
         recipe_id: id,
         quantity: 1, // or whatever quantity logic you want
       }, {
@@ -132,7 +132,7 @@ export default function AllRecipes() {
     const fetchRecipes = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/recipes');
+        const response = await axios.get('https://kitchnix-backend.onrender.com/api/v1/recipes');
         setRecipes(response.data);
       } catch (error) {
         console.error('Error fetching recipes:', error);
