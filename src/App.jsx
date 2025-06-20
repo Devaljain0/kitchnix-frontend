@@ -1,5 +1,7 @@
 
  import { Route, Routes } from 'react-router-dom'
+ import { Navigate } from 'react-router-dom';
+
  import Login from './routes/Login'
 // import Signup from './routes/Signup'
 // import Otp from './routes/Otp'
@@ -23,7 +25,8 @@ console.log("App loaded")
  
      <Routes>
     
-   <Route path="/login" element={<Login/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
      // <Route path="/order" element={<OrderSummary/>} />
   //     <Route path="/signup" element={<Signup/>} />
